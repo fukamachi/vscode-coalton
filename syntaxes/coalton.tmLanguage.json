@@ -1,0 +1,74 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vscode/main/extensions/json/syntaxes/JSON.tmLanguage.schema.json",
+  "name": "Coalton",
+  "scopeName": "source.coalton",
+  "patterns": [
+    { "include": "#keywords" },
+    { "include": "#types" },
+    { "include": "#strings" },
+    { "include": "#comments" },
+    { "include": "#blockComments" },
+    { "include": "#parentheses" }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(define|declare|define-type|define-type-alias|define-struct|define-class|define-instance|fn|if|and|or|when|unless|cond|match|let|for|in|while|while-let|break|continue|do|lisp|return|the|progn|package|as)\\b",
+          "name": "keyword.control.coalton"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "match": "\\b([A-Z][a-z0-9_-]*)\\b",
+          "name": "storage.type.coalton"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "begin": "\"",
+          "end": "\"",
+          "name": "string.quoted.double.coalton",
+          "patterns": [
+            {
+              "match": "\\\\.",
+              "name": "constant.character.escape.coalton"
+            }
+          ]
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "match": ";.*$",
+          "name": "comment.line.semicolon.coalton"
+        }
+      ]
+    },
+    "blockComments": {
+      "begin": "\\#\\|",
+      "contentName": "comment.block.coalton",
+      "end": "\\|\\#",
+      "name": "comment",
+      "patterns": [
+        {
+          "include": "#blockComments",
+          "name": "comment"
+        }
+      ]
+    },
+    "parentheses": {
+      "patterns": [
+        {
+          "match": "[()]",
+          "name": "punctuation.parenthesis.coalton"
+        }
+      ]
+    }
+  }
+}

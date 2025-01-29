@@ -35,6 +35,13 @@
 				]
 			}
 		],
+		"grammars": [
+			{
+				"language": "coalton",
+				"scopeName": "source.coalton",
+				"path": "./syntaxes/coalton.tmLanguage.json"
+			}
+		],
 		"configuration": {
 			"type": "object",
 			"title": "Example configuration",
