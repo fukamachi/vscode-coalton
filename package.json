@@ -33,6 +33,18 @@
 				"extensions": [
 					".coal"
 				]
+			},
+			{
+				"id": "common-lisp",
+				"aliases": [
+					"Common Lisp",
+					"common-lisp",
+					"Lisp",
+					"lisp"
+				],
+				"extensions": [
+					".lisp"
+				]
 			}
 		],
 		"grammars": [
