@@ -29,7 +29,7 @@ export function activate(_context: ExtensionContext) {
 	};
 
 	const clientOptions: LanguageClientOptions = {
-		documentSelector: [{ scheme: 'file', language: 'coalton' }]
+		documentSelector: [{ scheme: 'file', language: 'coalton' }, { scheme: 'file', language: 'common-lisp' }]
 	};
 
 	client = new LanguageClient(
