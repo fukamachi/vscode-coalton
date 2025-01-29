@@ -30,6 +30,10 @@
     "strings": {
       "patterns": [
         {
+          "match": "#\\\\.",
+          "name": "constant.character.literal.coalton"
+        },
+        {
           "begin": "\"",
           "end": "\"",
           "name": "string.quoted.double.coalton",
